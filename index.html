@@ -15,7 +15,11 @@
   </head>
 
   <body>
-    <div class="login-bg-parallax">
+    <video autoplay muted loop id="myVideo">
+      <source src="vid/logan-berzerker-rage-CUT.mp4" type="video/mp4">
+    </video>
+        
+    <div class="content">
       <div class="w3-row">
         <div class="w3-bar">
           <a href="#" class="navFont w3-bar-item comicTrackerNavTitle">AZAM INDUSTRIES COMIC TRACKER</a>
@@ -23,26 +27,24 @@
         </div>
       </div>
 
-      <div class="l-container">
-        <div class="w3-row">
-          <div class="w3-container w3-animate-bottom Flipped">
-            <div class="login-container">
-              <!--FORM-->
-              <form action="action_page.php">
-                <div class="imgcontainer">
-                  <img src="img/avengers-logo.png" alt="Avatar" class="avatar">
-                </div>
-                <div class="container">
-                  <input type="text" placeholder="USERNAME" name="uname" required class="login-font">
-                  <input type="password" placeholder="PASSWORD" name="psw" required class="login-font">
-                  <button type="submit" class="login-button-font">Login</button>
-                </div>
-              </form>
-            </div>
+      <div class="w3-row">
+        <div class="w3-container Flipped">
+          <div class="login-container">
+            <!--FORM-->
+            <form action="action_page.php">
+              <div class="imgcontainer">
+                <img src="img/avengers-logo.png" alt="Avatar" class="avatar">
+              </div>
+              <div class="container">
+                <input type="text" placeholder="USERNAME" name="uname" required class="login-font">
+                <input type="password" placeholder="PASSWORD" name="psw" required class="login-font">
+                <button type="submit" class="login-button-font">LOGIN</button>
+              </div>
+            </form>
           </div>
         </div>
+      </div>
     </div>
-  </div>
 
 
 

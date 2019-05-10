@@ -1,20 +1,26 @@
 .w3-bar{
-  background: rgba(0, 0, 0, 0.7);
+  background: rgb(0, 0, 0);
+  z-index: 1;
+}
+
+.w3-row{
+  z-index: 1;
 }
 
 .comicTrackerNavTitle{
   text-decoration: none;
 }
 .navFont{
-  color: white;
+  color: rgb(158, 19, 19);
+  font-size: 1.2em;
   font-family: "bahnschrift condensed", Times, serif;
 }
-
 
 body, html {
   height: 100%;
   margin: 0;
 }
+
 
 .login-bg-parallax {
   /* The image used */
@@ -26,29 +32,46 @@ body, html {
   height: 100%;
   position: fixed;
   width: 100%;
+}
 
+#myVideo {
+  position: absolute;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: 0;
+  left: 50%; /* % of surrounding element */
+  top: 50%;
+  transform: translate(-50%, -50%); /* % of current element */
+}
+
+.content {
+  position: fixed;
+  width: 100%;
 }
 
 
 .login-container{
+  border: 5px solid rgba(158, 19, 19, 0.6);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+
+
   font-family: "bahnschrift condensed", Times, serif;
   position: fixed; /* Stay in place */
   margin-left: auto;
   margin-right: auto;
   z-index: -1; /* Sit on top */
-  width: 40%; /* Full width */
+  width: 400px; /* Full width */
   height: 80%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-.l-container{
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .Flipped{
     direction: ltr;
@@ -58,7 +81,7 @@ body, html {
 /* Full-width inputs */
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 12px 20px;
+  padding: 8px 8px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -66,13 +89,14 @@ input[type=text], input[type=password] {
 }
 /* Set a style for all buttons */
 button {
-  background-color: #4CAF50;
+  background-color: rgb(158, 19, 19);
   color: white;
-  padding: 14px 20px;
+  padding: 10px 10px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 20%;
+  float: right;
 }
 /* Add a hover effect for buttons */
 button:hover {
@@ -93,26 +117,16 @@ img.avatar {
 .container {
   padding: 16px;
 }
-/* The "Forgot password" text */
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
 
-.login-title{
-  color: white;
-  font-family: "bahnschrift condensed", Times, serif;
-  font-size: 4em;
-}
 .login-font{
   color: black;
   font-family: "bahnschrift condensed", Times, serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 .login-button-font{
   color: white;
   font-family: "bahnschrift condensed", Times, serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 /* Change styles for span and cancel button on extra small screens */

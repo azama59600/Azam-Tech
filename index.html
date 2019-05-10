@@ -3,33 +3,49 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Comic Tracker</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="framework/w3.css">
-        <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AZAM INDUSTRIES COMIC TRACKER</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="framework/w3.css">
+    <link rel="stylesheet" href="style.css">
 
-        <div class="w3-bar w3-black">
-            <a href="#" class="navFont w3-bar-item" id="comicTrackerNavTitle">COMIC TRACKER</a>
-            <a href="#" class="navFont w3-bar-item w3-button w3-right">HELP</a>
+  </head>
+
+  <body>
+    <div class="login-bg-parallax">
+      <div class="w3-row">
+        <div class="w3-bar">
+          <a href="#" class="navFont w3-bar-item comicTrackerNavTitle">AZAM INDUSTRIES COMIC TRACKER</a>
+          <a href="#" class="navFont w3-bar-item w3-right comicTrackerNavTitle">?</a>
         </div>
-              
-              
-    </head>
-    <body>
-        <div class = "w3-row">
-            <div class = "w3-col s2 m4 l3">
-                <p>This text will use 2 columns on a small screen, 4 on a medium screen, and 3 on a large screen.</p>
+      </div>
+
+      <div class="l-container">
+        <div class="w3-row">
+          <div class="w3-container w3-animate-bottom Flipped">
+            <div class="login-container">
+              <!--FORM-->
+              <form action="action_page.php">
+                <div class="imgcontainer">
+                  <img src="img/avengers-logo.png" alt="Avatar" class="avatar">
+                </div>
+                <div class="container">
+                  <input type="text" placeholder="USERNAME" name="uname" required class="login-font">
+                  <input type="password" placeholder="PASSWORD" name="psw" required class="login-font">
+                  <button type="submit" class="login-button-font">Login</button>
+                </div>
+              </form>
             </div>
-            <div class = "w3-col s2 m4 l3">
-                    <p>This text will use 2 columns on a small screen, 4 on a medium screen, and 3 on a large screen.</p>
-            </div>
+          </div>
         </div>
-                 
-        
-        <script src="" async defer></script>
-    </body>
+    </div>
+  </div>
+
+
+
+    <script src="" async defer></script>
+  </body>
 </html>

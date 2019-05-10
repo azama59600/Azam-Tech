@@ -1,7 +1,127 @@
-#comicTrackerNavTitle{
-    text-decoration: none;
+.w3-bar{
+  background: rgba(0, 0, 0, 0.7);
 }
 
+.comicTrackerNavTitle{
+  text-decoration: none;
+}
 .navFont{
-    font-family: "bahnschrift condensed", Times, serif;
+  color: white;
+  font-family: "bahnschrift condensed", Times, serif;
+}
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.login-bg-parallax {
+  /* The image used */
+  background-image: url("img/greyscale/[greyscale] logan_graveyard_4k.jpg");
+  /* Full height */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+
+}
+
+
+.login-container{
+  font-family: "bahnschrift condensed", Times, serif;
+  position: fixed; /* Stay in place */
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1; /* Sit on top */
+  width: 40%; /* Full width */
+  height: 80%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+.l-container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Flipped{
+    direction: ltr;
+}
+
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.login-title{
+  color: white;
+  font-family: "bahnschrift condensed", Times, serif;
+  font-size: 4em;
+}
+.login-font{
+  color: black;
+  font-family: "bahnschrift condensed", Times, serif;
+  font-size: 1.5em;
+}
+.login-button-font{
+  color: white;
+  font-family: "bahnschrift condensed", Times, serif;
+  font-size: 1.5em;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
 }

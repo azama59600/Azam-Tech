@@ -19,6 +19,8 @@
 body, html {
   height: 100%;
   margin: 0;
+  background: rgb(0, 0, 0);
+  overflow: hidden;
 }
 
 
@@ -63,6 +65,7 @@ body, html {
   z-index: -1; /* Sit on top */
   width: 400px; /* Full width */
   height: 80%; /* Full height */
+  max-height: 450px;
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */

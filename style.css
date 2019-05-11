@@ -11,9 +11,14 @@
   text-decoration: none;
 }
 .navFont{
-  color: rgb(158, 19, 19);
+  color: white;
   font-size: 1.2em;
   font-family: "bahnschrift condensed", Times, serif;
+}
+
+.smallerNavBar{
+  font-size: 0.7em;
+  padding: 0px;
 }
 
 body, html {

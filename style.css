@@ -24,9 +24,9 @@ body, html {
 }
 
 
-.login-bg-parallax {
+.bg-parallax {
   /* The image used */
-  background-image: url("img/greyscale/[greyscale] logan_graveyard_4k.jpg");
+  background-image: url("img/wolverine-rooftop-1.jpg");
   /* Full height */
   background-position: center center;
   background-repeat: no-repeat;
@@ -142,3 +142,47 @@ img.avatar {
     width: 100%;
   }
 }
+
+
+
+
+
+.text-opacity{
+  font-size: 2em;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+
+.button-container{
+  border: 5px solid rgba(158, 19, 19, 0.6);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+
+
+  font-family: "bahnschrift condensed", Times, serif;
+  position: fixed; /* Stay in place */
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1; /* Sit on top */
+  width: 600px; /* Full width */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.button-font{
+  font-family: "bahnschrift condensed", Times, serif;
+  font-size: 3em;
+
+}
+
+.button-dimensions{
+  width: 12em;
+  margin: 0.1em;
+}
+

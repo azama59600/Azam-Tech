@@ -1,3 +1,12 @@
+.title-bahn{
+  font-family: "bahnschrift condensed", Times, serif;
+  color: white;
+}
+
+.font-bahn{
+  font-family: "bahnschrift condensed", Times, serif;
+}
+
 .w3-bar{
   background: rgb(0, 0, 0);
   z-index: 1;
@@ -5,6 +14,35 @@
 
 .w3-row{
   z-index: 1;
+}
+
+
+.go-button{
+  width: 100px;
+  font-size: 1.3em;
+  background: rgb(158, 19, 19);
+  color: white;
+  float: right;
+  margin-top: 0.5em;
+}
+
+.search-box{
+  font-size: 1.3em;
+}
+
+.center-titleBox{
+  padding-top: 12em;
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+
+.titleBox{
+  padding: 1em;
+
+  border: 5px solid rgba(158, 19, 19, 0.6);
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .comicTrackerNavTitle{
@@ -18,18 +56,16 @@
 
 .smallerNavBar{
   font-size: 0.7em;
-  padding: 0px;
 }
 
 body, html {
   height: 100%;
   margin: 0;
   background: rgb(0, 0, 0);
-  overflow: hidden;
 }
 
 
-.bg-parallax {
+.bg-fit-screen {
   /* The image used */
   background-image: url("img/wolverine-rooftop-1.jpg");
   /* Full height */
@@ -79,6 +115,8 @@ body, html {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+
 
 
 .Flipped{
@@ -191,3 +229,34 @@ img.avatar {
   margin: 0.1em;
 }
 
+.bg-parallax {
+  /* The image used */
+  background-image: url("img/wolverine-rooftop-1.jpg");
+  /* Full height */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100px;
+  position: fixed;
+  width: 100%;
+}
+
+.parallax{
+  /* The image used */
+  background-image: url("img/wolverine-rooftop-1.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  min-height: 40em;
+
+
+}

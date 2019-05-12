@@ -7,6 +7,35 @@
   font-family: "bahnschrift condensed", Times, serif;
 }
 
+.result-container{
+  background: black;
+  padding-bottom: 1.6em;
+}
+
+.panels{
+  background: rgb(158, 19, 19);
+  line-height: normal;
+  float: left;
+  width: 100%;
+  font-family: "bahnschrift condensed", Times, serif;
+  font-size: 1.5em;
+  color: white;
+  text-align: left;
+}
+
+
+i{
+  margin-top: 0.3em;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  text-align: right;
+}
+
+
 .w3-bar{
   background: rgb(0, 0, 0);
   z-index: 1;
@@ -40,6 +69,7 @@
 .titleBox{
   padding: 1em;
 
+  border: 5px solid rgb(158, 19, 19);
   border: 5px solid rgba(158, 19, 19, 0.6);
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -61,7 +91,7 @@
 body, html {
   height: 100%;
   margin: 0;
-  background: rgb(0, 0, 0);
+  background: black;
 }
 
 

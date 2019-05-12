@@ -37,9 +37,9 @@
             <h1 class="w3-xxxlarge title-bahn">SEARCH</h1>
           </div>
           <div class="w3-row ">
-            <form>
-              <input type="search" name="searchedItems" class="w3-bar-item w3-input font-bahn search-box" placeholder="SEARCH FOR COMICS, GRAPHIC NOVELS, CHARACTERS, MOVIES, TV...">
-              <a href="#" type="submit" class="w3-bar-item w3-button font-bahn go-button">GO</a>  
+            <form onsubmit="javascript:myFunction();">
+              <input type="search" id="searchTxt" name="searchTxt" class="w3-bar-item w3-input font-bahn search-box" placeholder="SEARCH FOR COMICS, GRAPHIC NOVELS, CHARACTERS, MOVIES, TV...">
+              <a onclick="myFunction()" type="submit" class="w3-bar-item w3-button font-bahn go-button">GO</a>  
             </form>
           </div>
         </div>
@@ -47,15 +47,64 @@
       </div>
     </div>
 
-    <div class="w3-row w3-white">
-      <div style="height:1000px;font-size:36px">
-      Scroll Up and Down this page to see the parallax scrolling effect.
-      This div is just here to enable scrolling.
-      Tip: Try to remove the background-attachment property to remove the scrolling effect.
+    <div class="w3-container result-container" style="border-top: 5px solid rgba(158, 19, 19, 0.6)">
+      <div class="w3-row">
+        <h1 class="title-bahn">RESULTS:</h1>
+        <hr>
+      </div>
+    
+      <div class="w3-row">
+        <button class="w3-button panels" onclick="document.getElementById('characterPanel').style.display='block'">CHARCTER / GROUP <i style="float: right;"></i></button> 
+        <div id="characterPanel" class="w3-panel w3-white w3-display-container" style="display:none">
+          <span onclick="this.parentElement.style.display='none'"
+          class="w3-button w3-display-topright">X</span>
+          <p>Click on the X to close this panel.</p>
+          <p>Click on the X to close this panel.</p>
+        </div>
+      </div>
+
+      <div class="w3-row">  
+        <button class="w3-button panels" onclick="document.getElementById('graphicNovelPanel').style.display='block'">GRAPHIC NOVELS <i style="float: right;"></i></button> 
+        <div id="graphicNovelPanel" class="w3-panel w3-white w3-display-container" style="display:none">
+          <span onclick="this.parentElement.style.display='none'"
+          class="w3-button w3-display-topright">X</span>
+          <p>Click on the X to close this panel.</p>
+          <p>Click on the X to close this panel.</p>
+        </div>
+      </div>
+
+      <div class="w3-row">
+        <button class="w3-button panels" onclick="document.getElementById('graphicNovelPanel').style.display='block'">COMIC BOOKS <i style="float: right;"></i></button> 
+        <div id="comicBookPanel" class="w3-panel w3-white w3-display-container" style="display:none">
+          <span onclick="this.parentElement.style.display='none'"
+          class="w3-button w3-display-topright">X</span>
+          <p>Click on the X to close this panel.</p>
+          <p>Click on the X to close this panel.</p>
+        </div>
+      </div>
+
+      <div class="w3-row">
+        <button class="w3-button panels" onclick="document.getElementById('moviesPanel').style.display='block'">MOVIES <i style="float: right;"></i></button> 
+        <div id="moviesPanel" class="w3-panel w3-white w3-display-container" style="display:none">
+          <span onclick="this.parentElement.style.display='none'"
+          class="w3-button w3-display-topright">X</span>
+          <p>Click on the X to close this panel.</p>
+          <p>Click on the X to close this panel.</p>
+        </div>
+      </div>
+
+      <div class="w3-row">
+        <button class="w3-button panels" onclick="document.getElementById('tvPanel').style.display='block'">TV SHOWS <i style="float: right;"></i></button> 
+        <div id="tvPanel" class="w3-panel w3-white w3-display-container" style="display:none">
+          <span onclick="this.parentElement.style.display='none'"
+          class="w3-button w3-display-topright">X</span>
+          <p>Click on the X to close this panel.</p>
+          <p>Click on the X to close this panel.</p>
+        </div>
       </div>
     </div>
-  
-  
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -7,6 +7,7 @@
   font-family: "bahnschrift condensed", Times, serif;
 }
 
+
 .result-container{
   background: black;
   padding-bottom: 1.6em;
@@ -60,11 +61,18 @@ i{
 }
 
 .center-titleBox{
-  padding-top: 12em;
+  padding-top: 15em;
+  padding-bottom: 15em;
   padding-left: 10em;
   padding-right: 10em;
 }
 
+.center-titleBox-track{
+  padding-top: 18.5em;
+  padding-bottom: 18.5em;
+  padding-left: 10em;
+  padding-right: 10em;
+}
 
 .titleBox{
   padding: 1em;

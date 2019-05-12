@@ -29,8 +29,51 @@
   </head>
 
   <body>
-    <div class="content bg-fit-screen"></div>
-  
+      <div class="parallax">
+          <div class="center-titleBox-track">
+    
+            <div class="titleBox">
+              <div class="w3-row w3-center">
+                <h1 class="w3-xxxlarge title-bahn">TRACK</h1>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+    
+        <div class="w3-container result-container" style="border-top: 5px solid rgba(158, 19, 19, 0.6)">
+          <div class="w3-row">
+            <h1 class="title-bahn">DATABASES:</h1>
+            <hr>
+          </div>
+        
+    
+          <div class="w3-row">  
+            <button class="w3-button panels" onclick="document.getElementById('graphicNovelPanel').style.display='block'">GRAPHIC NOVELS <i style="float: right;"></i></button> 
+            <div id="graphicNovelPanel" class="w3-panel w3-white w3-display-container" style="display:none">
+              <span onclick="this.parentElement.style.display='none'"
+              class="w3-button w3-display-topright">X</span>
+              <h2 class="font-bahn">GRAPHIC NOVEL DATABASE</h2>
+              <p>Click on the X to close this panel.</p>
+            </div>
+          </div>
+    
+          <div class="w3-row">
+            <button class="w3-button panels" onclick="document.getElementById('comicBookPanel').style.display='block'">COMIC BOOKS <i style="float: right;"></i></button> 
+            <div id="comicBookPanel" class="w3-panel w3-white w3-display-container" style="display:none">
+              <span onclick="this.parentElement.style.display='none'"
+              class="w3-button w3-display-topright">X</span>
+              <h2 class="font-bahn">COMIC BOOK DATABASE</h2>
+              <p>Click on the X to close this panel.</p>
+            </div>
+          </div>
+    
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+      </body>
+    </html>
+      
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>

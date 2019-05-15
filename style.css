@@ -8,7 +8,7 @@
 }
 
 
-.result-container{
+#result-container{
   background: black;
   padding-bottom: 1.6em;
 }
@@ -65,6 +65,7 @@ i{
   padding-bottom: 15em;
   padding-left: 10em;
   padding-right: 10em;
+  height: 100%;
 }
 
 .center-titleBox-track{
@@ -292,9 +293,11 @@ img.avatar {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
   width: 100%;
-  min-height: 40em;
+}
 
 
+.searchFrame{
+  border: 5px solid rgb(158, 19, 19);
+  border: 5px solid rgba(158, 19, 19, 0.6);
 }

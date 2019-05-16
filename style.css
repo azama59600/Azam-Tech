@@ -13,6 +13,10 @@
   padding-bottom: 1.6em;
 }
 
+#searchIframe{
+  margin-top: 1em;
+}
+
 .panels{
   background: rgb(158, 19, 19);
   line-height: normal;
@@ -61,8 +65,8 @@ i{
 }
 
 .center-titleBox{
-  padding-top: 15em;
-  padding-bottom: 15em;
+  padding-top: 17.5em;
+  padding-bottom: 17.5em;
   padding-left: 10em;
   padding-right: 10em;
   height: 100%;
@@ -106,7 +110,7 @@ body, html {
 
 .bg-fit-screen {
   /* The image used */
-  background-image: url("img/wolverine-rooftop-1.jpg");
+  background-image: url("img/batcave.png");
   /* Full height */
   background-position: center center;
   background-repeat: no-repeat;
@@ -270,7 +274,7 @@ img.avatar {
 
 .bg-parallax {
   /* The image used */
-  background-image: url("img/wolverine-rooftop-1.jpg");
+  background-image: url("img/batcave.png");
   /* Full height */
   background-attachment: fixed;
   background-position: center;
@@ -283,7 +287,7 @@ img.avatar {
 
 .parallax{
   /* The image used */
-  background-image: url("img/wolverine-rooftop-1.jpg");
+  background-image: url("img/batcave.png");
 
   /* Set a specific height */
   min-height: 500px; 

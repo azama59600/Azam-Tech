@@ -21,6 +21,7 @@
         <a href="#" class="navFont w3-bar-item w3-button w3-right comicTrackerNavTitle">?</a>
         <a href="track.html" class="navFont w3-bar-item  w3-button w3-right comicTrackerNavTitle">TRACK</a>
         <a href="search.html" class="navFont w3-bar-item w3-white  w3-button w3-right comicTrackerNavTitle">SEARCH</a>
+        <a href="read.html" class="navFont w3-bar-item w3-button w3-right comicTrackerNavTitle">READ</a>      
         <a href="dashboard.html" class="navFont w3-bar-item w3-button w3-right comicTrackerNavTitle">DASHBOARD</a>      
       </div>
     </div>  
@@ -46,19 +47,10 @@
     </div>
 
     <div id="result-container" class="w3-container" style="border-top: 5px solid rgba(158, 19, 19, 0.6)">
+
       <div class="w3-row">
-        <h1 class="title-bahn">RESULTS:</h1>
+        <iframe id="searchIframe" class="searchFrame" width="100%" height="500em"></iframe>
         <hr>
-      </div>
-      
-      <div class="w3-row">
-        <button class="w3-button panels" onclick="document.getElementById('characterPanel').style.display='block'">CHARCTERS<i style="float: right;"></i></button> 
-        <div id="characterPanel" class="w3-panel w3-white w3-display-container" style="display:none">
-          <span onclick="this.parentElement.style.display='none'"
-          class="w3-button w3-display-topright">X</span>
-          <h2 class="font-bahn">CHARACTERS</h2>
-          <iframe id="characterIframe" class="searchFrame" width="100%" height="500em"></iframe>
-        </div>
       </div>
 
       <div class="w3-row">  
@@ -67,27 +59,7 @@
           <span onclick="this.parentElement.style.display='none'"
           class="w3-button w3-display-topright">X</span>
           <h2 class="font-bahn">GRAPHIC NOVELS / COMICS</h2>
-          <iframe id="comicsIframe" class="searchFrame" width="100%" height="500em"></iframe>
-        </div>
-      </div>
-
-      <div class="w3-row">
-        <button class="w3-button panels" onclick="document.getElementById('moviesPanel').style.display='block'">MOVIES <i style="float: right;"></i></button> 
-        <div id="moviesPanel" class="w3-panel w3-white w3-display-container" style="display:none">
-          <span onclick="this.parentElement.style.display='none'"
-          class="w3-button w3-display-topright">X</span>
-          <h2 class="font-bahn">MOVIES</h2>
-          <iframe id="movieIframe" class="searchFrame" width="100%" height="500em"></iframe>
-        </div>
-      </div>
-
-      <div class="w3-row">
-        <button class="w3-button panels" onclick="document.getElementById('tvPanel').style.display='block'">TV SHOWS <i style="float: right;"></i></button> 
-        <div id="tvPanel" class="w3-panel w3-white w3-display-container" style="display:none">
-          <span onclick="this.parentElement.style.display='none'"
-          class="w3-button w3-display-topright">X</span>
-          <h2 class="font-bahn">TV SHOWS</h2>
-          <iframe id="tvIframe" class="searchFrame" width="100%" height="500em"></iframe>
+          <iframe sandbox="allow-scripts allow-same-origin" id="comicsIframe" class="searchFrame" width="100%" height="500em"></iframe>
         </div>
       </div>
 

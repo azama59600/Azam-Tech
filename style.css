@@ -1,10 +1,10 @@
 .title-bahn{
-  font-family: "bahnschrift condensed", Times, serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   color: white;
 }
 
 .font-bahn{
-  font-family: "bahnschrift condensed", Times, serif;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 
@@ -22,7 +22,7 @@
   line-height: normal;
   float: left;
   width: 100%;
-  font-family: "bahnschrift condensed", Times, serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1.5em;
   color: white;
   text-align: left;
@@ -94,7 +94,7 @@ i{
 .navFont{
   color: white;
   font-size: 1.2em;
-  font-family: "bahnschrift condensed", Times, serif;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .smallerNavBar{
@@ -142,7 +142,7 @@ body, html {
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 
 
-  font-family: "bahnschrift condensed", Times, serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   position: fixed; /* Stay in place */
   margin-left: auto;
   margin-right: auto;
@@ -209,12 +209,12 @@ img.avatar {
 
 .login-font{
   color: black;
-  font-family: "bahnschrift condensed", Times, serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1.3em;
 }
 .login-button-font{
   color: white;
-  font-family: "bahnschrift condensed", Times, serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1.3em;
 }
 
@@ -246,7 +246,7 @@ img.avatar {
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 
 
-  font-family: "bahnschrift condensed", Times, serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   position: fixed; /* Stay in place */
   margin-left: auto;
   margin-right: auto;
@@ -262,7 +262,7 @@ img.avatar {
 }
 
 .button-font{
-  font-family: "bahnschrift condensed", Times, serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   font-size: 3em;
 
 }
@@ -271,6 +271,7 @@ img.avatar {
   width: 12em;
   margin: 0.1em;
 }
+
 
 .bg-parallax {
   /* The image used */
@@ -305,3 +306,5 @@ img.avatar {
   border: 5px solid rgb(158, 19, 19);
   border: 5px solid rgba(158, 19, 19, 0.6);
 }
+
+

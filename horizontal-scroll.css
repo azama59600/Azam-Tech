@@ -1,0 +1,79 @@
+html {
+    background-color: rgb(36, 36, 36);
+
+    background-image: url("img/grid grey - Copy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;  
+    height: 100%; 
+}
+
+/*SCROLLBAR*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 38, 0); 
+} 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/*FONTS AND TEXT PROPERTIES*/
+.font-pt-sans{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+.heading{
+    font-size: 2em;
+}
+
+/*NAVBAR PROPERTIES*/
+.nav-style{
+    border-bottom: 0.05em solid rgb(255, 38, 0);
+    background-color: rgba(0, 0, 0, 0.507);
+}
+.nav-title{
+    color: white;
+}
+
+/*ROWS AND COLUMN PROPERTIES*/
+.w3-row{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.w3-col{
+    margin: 0.5em;
+    width: auto;
+    height: 45.7em;
+    background-color: rgba(37, 35, 35, 0.8);
+    border: 0.05em solid white;
+    color: rgb(255, 38, 0);
+}
+
+/*COLUMN TITLES*/
+#column1-title{
+    text-align: left;
+    margin-left: 0.5em;
+    margin-right: 17em;
+}
+#column2-title{
+    text-align: left;
+    margin-left: 0.5em;
+    margin-right: 25em;
+}
+#column3-title{
+    text-align: left;
+    margin-left: 0.5em;
+    margin-right: 10em;
+}
+
+
+
+  

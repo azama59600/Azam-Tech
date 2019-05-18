@@ -10,31 +10,32 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="framework/w3.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="horizontal-scroll.css">
 
-    <div class="w3-top">
-      <div class="w3-bar">
-        <a class="navFont w3-bar-item comicTrackerNavTitle">WELCOME ADAM!</a>
-        <a href="index.html" class="navFont w3-bar-item w3-right comicTrackerNavTitle">LOG OUT</a>
-      </div>
-      <div class="w3-bar smallerNavBar">
-        <a href="#" class="navFont w3-bar-item w3-button w3-right comicTrackerNavTitle">?</a>
-        <a href="track.html" class="navFont w3-bar-item  w3-button w3-right comicTrackerNavTitle">TRACK</a>
-        <a href="search.html" class="navFont w3-bar-item  w3-button w3-right comicTrackerNavTitle">SEARCH</a>
-        <a href="read.html" class="navFont w3-bar-item w3-button w3-right comicTrackerNavTitle">READ</a>      
-        <a href="dashboard.html" class="navFont w3-bar-item w3-white w3-button w3-right comicTrackerNavTitle">DASHBOARD</a>
-      </div>
+    <!--Navbar-->
+    <div class="w3-bar nav-style">
+      <a class="w3-bar-item font-pt-sans nav-title">ULTIMATE COMIC TRACKER</a>
     </div>
-  
-
   </head>
 
   <body>
-
-    <div class="content bg-fit-screen">
+    <div class="w3-container">
+      <div class="w3-row fullheight">
+        <div id="column1" class="w3-col" style="margin-left: 0">
+          <h1 id="column1-title" class="font-pt-sans heading">COMIC TRACKING DATABASES</h1>
+        </div>
+        <div id="column2" class="w3-col">
+          <h1 id="column2-title" class="font-pt-sans heading">SEARCH COMIC</h1>
+        </div>
+        <div id="column3" class="w3-col">
+          <h1 id="column3-title" class="font-pt-sans heading">READ COMICS</h1>
+        </div>
+      </div>
+      
     </div>
-  
-  
+     
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>

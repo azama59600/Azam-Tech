@@ -10,32 +10,79 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="framework/w3.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="horizontal-scroll.css">
+
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Assistant|News+Cycle&display=swap" rel="stylesheet">
 
     <!--Navbar-->
     <div class="w3-bar nav-style">
-      <a class="w3-bar-item font-pt-sans nav-title">ULTIMATE COMIC TRACKER</a>
+      <a class="w3-bar-item font-abel nav-title">ULTIMATE COMIC TRACKER</a>
     </div>
   </head>
 
   <body>
-    <div class="w3-container">
-      <div class="w3-row fullheight">
+    <div class="w3-container" style="z-index: 1000;">
+      <div class="w3-row main-row fullheight">
         <div id="column1" class="w3-col" style="margin-left: 0">
-          <h1 id="column1-title" class="font-pt-sans heading">COMIC TRACKING DATABASES</h1>
+          <h1 id="column1-title" class="font-abel heading">COMIC TRACKING DATABASES</h1>
+          <button class="font-abel manage-databases-button" onclick="openManageDatabaseWindow()">MANAGE DATABASES <i id="manage-arrow"></i></button>
+          
+          <div class="w3-row database-frame">
+            <h6 class="db-name font-abel sub-heading"><span style="background-color: black; color: white;">01. GRAPHIC NOVELS</span></h6>
+            <h6 class="last-updated text-margin font-abel sub-heading">LAST UPDATED: <span style="font-weight: bold;">01_JAN_2019</span></h6>
+            <h6 class="entry-count text-margin font-abel sub-heading">ENTRY COUNT: <span style="font-weight: bold;">23</span></h6>
+          </div>
+          <div class="w3-row database-frame">
+            <h6 class="db-name font-abel sub-heading"><span style="background-color: black; color: white;">02. COMIC ISSUES</span></h6>
+            <h6 class="last-updated text-margin font-abel sub-heading">LAST UPDATED: <span style="font-weight: bold;">26_MAR_2019</span></h6>
+            <h6 class="entry-count text-margin font-abel sub-heading">ENTRY COUNT: <span style="font-weight: bold;">42</span></h6>
+          </div>
+          <div id="manage-databases-pop-up-box" style="display: none;">
+            <button class="font-abel finish-button" onclick="closeManageDatabaseWindow()">&#10006;</button>
+            <h1 class="font-abel heading">MANAGE DATABASES</h1>
+            <div class="w3-row database-frame">
+              <h6 class="create-database-title font-abel sub-heading"><span style="color: white;">01. CREATE NEW DATABASES</span></h6>
+              <h6 class="enter-database-name font-abel sub-heading">ENTER NAME FOR DATABASES</h6>
+              <input class="input-name-text font-abel w3-input w3-border" type="text">
+              <button class="font-abel database-button">CREATE DATABASES<i id="manage-box-arrow"></i></button>
+            </div>
+            <div class="w3-row database-frame">
+              <h6 class="delete-database-title font-abel sub-heading"><span style="color: white;">02. DELETE DATABASES</span></h6>
+              <select class="w3-select font-abel dropdown-databases" name="option">
+                <option value="" disabled selected>CHOOSE DATABASES</option>
+                <option value="1">MARVEL</option>
+                <option value="2">DC</option>
+                <option value="3">IMAGE</option>
+              </select>
+              <button class="font-abel database-button">DELETE DATABASES<i id="manage-box-arrow"></i></button>
+            </div>
+          </div>
         </div>
         <div id="column2" class="w3-col">
-          <h1 id="column2-title" class="font-pt-sans heading">SEARCH COMIC</h1>
+          <h1 id="column2-title" class="font-abel heading">SEARCH COMIC</h1>
         </div>
         <div id="column3" class="w3-col">
-          <h1 id="column3-title" class="font-pt-sans heading">READ COMICS</h1>
+          <h1 id="column3-title" class="font-abel heading">[READ COMICS] LIST OF WEBSITES </h1>
+        </div>
+        <div id="column4-video-images" class="w3-col multiple-rows">
+          <div class="w3-row row1-images">
+            <h1 id="row1-title" class="font-abel heading">IMAGES</h1>
+          </div>
+          <div class="w3-row row2-videos">
+            <div class="w3-row">
+              <h1 id="row2-title" class="font-abel heading">VIDEOS</h1>
+            </div>
+            <div class="w3-row">
+            </div>
+          </div>
         </div>
       </div>
       
     </div>
      
-
+    <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>

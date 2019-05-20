@@ -27,18 +27,41 @@
       <div class="w3-row main-row fullheight">
         <div id="column1" class="w3-col" style="margin-left: 0">
           <h1 id="column1-title" class="font-abel heading">COMIC TRACKING DATABASES</h1>
-          <button class="font-abel manage-databases-button" onclick="openManageDatabaseWindow()">MANAGE DATABASES <i id="manage-arrow"></i></button>
-          
+          <!--Load Database dropdown menu-->
+          <select id="load-database" class="w3-select font-abel dropdown-databases" name="option">
+            <option class="dropdown-options secondary-background-color" value="" disabled selected>LOAD DATABASE</option>
+            <option class="dropdown-options tertiary-background-color" value="1" >MARVEL</option>
+            <option class="dropdown-options quaternary-background-color" value="2">DC</option>
+            <option class="dropdown-options quinary-background-color" value="3">IMAGE</option>
+          </select>
+          <button class="font-abel manage-databases-button secondary-background-color" onclick="openManageDatabaseWindow()">MANAGE DATABASES <i id="manage-arrow"></i></button>
+          <!--01. Graphic Novels-->
           <div class="w3-row database-frame">
             <h6 class="db-name font-abel sub-heading"><span style="background-color: black; color: white;">01. GRAPHIC NOVELS</span></h6>
             <h6 class="last-updated text-margin font-abel sub-heading">LAST UPDATED: <span style="font-weight: bold;">01_JAN_2019</span></h6>
             <h6 class="entry-count text-margin font-abel sub-heading">ENTRY COUNT: <span style="font-weight: bold;">23</span></h6>
+            <!--Buttons-->
+            <button class="font-abel add-command-button command-database-button primary-background-color" onclick="addGraphicNovelWindow()">ADD</button>
+            <button class="font-abel command-database-button secondary-background-color" onclick="alterGraphicNovelWindow() ">ALTER</button>
+            <button class="font-abel command-database-button tertiary-background-color" onclick="deleteGraphicNovelWindow()">DELETE</button>
+            <button class="font-abel command-database-button quaternary-background-color" onclick="sortGraphicNovelWindow()">SORT</button>
+            <button class="font-abel command-database-button quinary-background-color" onclick="hideGraphicNovelWindow()">HIDE</button>
           </div>
+          <!--02. Comic Issues-->
           <div class="w3-row database-frame">
             <h6 class="db-name font-abel sub-heading"><span style="background-color: black; color: white;">02. COMIC ISSUES</span></h6>
             <h6 class="last-updated text-margin font-abel sub-heading">LAST UPDATED: <span style="font-weight: bold;">26_MAR_2019</span></h6>
             <h6 class="entry-count text-margin font-abel sub-heading">ENTRY COUNT: <span style="font-weight: bold;">42</span></h6>
+            <!--Buttons-->
+            <button class="font-abel add-command-button command-database-button primary-background-color" onclick="addComicBookWindow()">ADD</button>
+            <button class="font-abel command-database-button secondary-background-color" onclick="alterComicBookWindow()">ALTER</button>
+            <button class="font-abel command-database-button tertiary-background-color" onclick="deleteComicBookWindow()">DELETE</button>
+            <button class="font-abel command-database-button quaternary-background-color" onclick="sortComicBookWindow()">SORT</button>
+            <button class="font-abel command-database-button quinary-background-color" onclick="hideComicBookWindow()">HIDE</button>
+
           </div>
+
+          <!--[WINDOW] Manage Databases-->
           <div id="manage-databases-pop-up-box" style="display: none;">
             <button class="font-abel finish-button" onclick="closeManageDatabaseWindow()">&#10006;</button>
             <h1 class="font-abel heading">MANAGE DATABASES</h1>
@@ -51,14 +74,37 @@
             <div class="w3-row database-frame">
               <h6 class="delete-database-title font-abel sub-heading"><span style="color: white;">02. DELETE DATABASES</span></h6>
               <select class="w3-select font-abel dropdown-databases" name="option">
-                <option value="" disabled selected>CHOOSE DATABASES</option>
-                <option value="1">MARVEL</option>
-                <option value="2">DC</option>
-                <option value="3">IMAGE</option>
+                <option class="dropdown-options secondary-background-color" value="" disabled selected>CHOOSE DATABASES</option>
+                <option class="dropdown-options tertiary-background-color" value="1">MARVEL</option>
+                <option class="dropdown-options quaternary-background-color" value="2">DC</option>
+                <option class="dropdown-options quinary-background-color" value="3">IMAGE</option>
               </select>
               <button class="font-abel database-button">DELETE DATABASES<i id="manage-box-arrow"></i></button>
             </div>
           </div>
+          <!--[WINDOW] ADD ENTRY-->
+          <div id="add-entry-pop-up-box" style="display: none;">
+            <button class="font-abel finish-button" onclick="closeManageDatabaseWindow()">&#10006;</button>
+            <h1 class="font-abel heading">MANAGE DATABASES</h1>
+            <div class="w3-row database-frame">
+              <h6 class="create-database-title font-abel sub-heading"><span style="color: white;">01. CREATE NEW DATABASES</span></h6>
+              <h6 class="enter-database-name font-abel sub-heading">ENTER NAME FOR DATABASES</h6>
+              <input class="input-name-text font-abel w3-input w3-border" type="text">
+              <button class="font-abel database-button">CREATE DATABASES<i id="manage-box-arrow"></i></button>
+            </div>
+            <div class="w3-row database-frame">
+              <h6 class="delete-database-title font-abel sub-heading"><span style="color: white;">02. DELETE DATABASES</span></h6>
+              <select class="w3-select font-abel dropdown-databases" name="option">
+                <option class="dropdown-options secondary-background-color" value="" disabled selected>CHOOSE DATABASES</option>
+                <option class="dropdown-options tertiary-background-color" value="1">MARVEL</option>
+                <option class="dropdown-options quaternary-background-color" value="2">DC</option>
+                <option class="dropdown-options quinary-background-color" value="3">IMAGE</option>
+              </select>
+              <button class="font-abel database-button">DELETE DATABASES<i id="manage-box-arrow"></i></button>
+            </div>
+          </div>
+
+
         </div>
         <div id="column2" class="w3-col">
           <h1 id="column2-title" class="font-abel heading">SEARCH COMIC</h1>

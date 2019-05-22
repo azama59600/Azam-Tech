@@ -65,7 +65,7 @@
             <button class="font-abel finish-button" onclick="closeWindow()">&#10006;</button>
             <h1 class="font-abel heading">MANAGE DATABASES</h1>
             <div class="w3-row database-frame">
-              <h6 class="create-database-title font-abel sub-heading"><span style="color: white;">01. CREATE NEW DATABASES</span></h6>
+              <h6 class="create-database-title font-abel sub-heading"><span style="color: white;">CREATE NEW DATABASES</span></h6>
               <h6 class="enter-database-name font-abel sub-heading">ENTER NAME FOR DATABASES</h6>
               <input class="input-name-text font-abel w3-input w3-border" type="text">
               <button class="font-abel database-button">CREATE DATABASES<i id="manage-box-arrow"></i></button>
@@ -82,23 +82,48 @@
             </div>
           </div>
           <!--[WINDOW] ADD ENTRY-->
-          <div id="add-entry-pop-up-box" style="display: none;">
+          <div id="add-entry-pop-up-box" style="display: none; overflow: auto;">
             <button class="font-abel finish-button" onclick="closeWindow()">&#10006;</button>
             <h1 class="font-abel heading">ADD ENTRY</h1>
-            <div class="w3-row database-frame">
-              <h6 class="create-database-title font-abel sub-heading"><span style="color: white;">01. CREATE NEW DATABASES</span></h6>
-              <h6 class="enter-database-name font-abel sub-heading">ENTER NAME FOR DATABASES</h6>
-              <input class="input-name-text font-abel w3-input w3-border" type="text">
-              <button class="font-abel database-button">CREATE DATABASES<i id="manage-box-arrow"></i></button>
-            </div>
-            <div class="w3-row database-frame">
-              <h6 class="delete-database-title font-abel sub-heading"><span style="color: white;">02. DELETE DATABASES</span></h6>
+            <div class="w3-row">
               <select class="w3-select font-abel dropdown-databases" name="option">
                 <option class="dropdown-options secondary-background-color" value="" disabled selected>CHOOSE DATABASES</option>
                 <option class="dropdown-options tertiary-background-color" value="1">MARVEL</option>
                 <option class="dropdown-options quaternary-background-color" value="2">DC</option>
                 <option class="dropdown-options quinary-background-color" value="3">IMAGE</option>
               </select>
+            </div>
+            <!--01. GRAPHIC NOVEL-->
+            <div class="w3-row database-frame">
+              <h6 class="create-database-title font-abel sub-heading"><span style="color: white;">01. GRAPHIC NOVEL</span></h6>
+              <!--ID-->
+              <h6 class="enter-database-name font-abel sub-heading">ID</h6>
+              <input class="input-name-text font-abel w3-input w3-border" type="text">
+              <!--YEAR-->
+              <h6 class="enter-database-name font-abel sub-heading">YEAR</h6>
+              <input class="input-name-text font-abel w3-input w3-border" type="text">
+              <!--BRAND-->
+              <h6 class="enter-database-name font-abel sub-heading">BRAND</h6>
+              <input class="input-name-text font-abel w3-input w3-border" type="text">
+              <!--CONTINUITY-->
+              <h6 class="enter-database-name font-abel sub-heading">CONTINUITY</h6>
+              <input class="input-name-text font-abel w3-input w3-border" type="text">
+              <!--SERIES NAME-->
+              <h6 class="enter-database-name font-abel sub-heading">YEAR</h6>
+              <input class="input-name-text font-abel w3-input w3-border" type="text">
+              <!--ONGOING-->
+              <h6 class="enter-database-name font-abel sub-heading">YEAR</h6>
+              <input class="input-name-text font-abel w3-input w3-border" type="text">
+              <!--TOTAL VOL NO.-->
+              <h6 class="enter-database-name font-abel sub-heading">YEAR</h6>
+              <input class="input-name-text font-abel w3-input w3-border" type="text">
+
+
+              <button class="font-abel database-button">CREATE DATABASES<i id="manage-box-arrow"></i></button>
+            </div>
+            <div class="w3-row database-frame">
+              <h6 class="delete-database-title font-abel sub-heading"><span style="color: white;">02. DELETE DATABASES</span></h6>
+
               <button class="font-abel database-button">DELETE DATABASES<i id="manage-box-arrow"></i></button>
             </div>
           </div>

@@ -72,7 +72,7 @@ html {
     overflow-x: auto;
     white-space: nowrap;
 }
-.w3-col{
+.main-col{
     margin: 0.5em;
     margin-left: 0.25em;
     margin-right: 0.25em;
@@ -160,13 +160,13 @@ html {
     font-size: 1em;
 }
 .entry-count{
-    color: rgb(211, 61, 35);
+    color: rgb(211, 129, 35);
     margin-left: 0.75em;
     font-size: 1em;
     margin-bottom: 0;
 }
 .last-updated{
-    color: rgb(211, 61, 35);
+    color: rgb(211, 129, 35);
     margin-left: 0.75em;
     font-size: 1em;
 }
@@ -219,7 +219,7 @@ html {
     margin-top: -0.3em;
     margin-left: 0.5em;
     margin-bottom: 0;
-    color: rgb(211, 61, 35);
+    color: rgb(211, 129, 35);
 }
 .input-name-text{
     font-size: 0.8em;
@@ -228,7 +228,7 @@ html {
     text-align: left;
     background-color: rgb(146, 22, 0);
     color: white;
-    width: 22.7em;
+    width: 95%;
     margin-left: 0.5em;
     margin-bottom: 1em;
     padding-left: 0.35em;
@@ -288,9 +288,10 @@ html {
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     width: 20em;
-    height: 17em;
+    height: 30em;
     box-shadow: 0em 0em 1.3em #888888;
 }
+
 #alter-entry-pop-up-box{
     border: 0.05em solid white;
     background-color: black;
@@ -316,7 +317,7 @@ html {
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     width: 20em;
-    height: 17em;
+    height: 13.5em;
     box-shadow: 0em 0em 1.3em #888888;
 }
 #sort-entry-pop-up-box{
@@ -330,7 +331,7 @@ html {
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     width: 20em;
-    height: 17em;
+    height: 13.4em;
     box-shadow: 0em 0em 1.3em #888888;
 }
 #hide-entry-pop-up-box{
@@ -344,7 +345,7 @@ html {
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     width: 20em;
-    height: 17em;
+    height: 13.5em;
     box-shadow: 0em 0em 1.3em #888888;
 }
 

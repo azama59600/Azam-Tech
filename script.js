@@ -36,6 +36,90 @@ function openHideWindow(){
   }
 }
 
+//HIDE GRAPHIC NOVELS
+function hideAlterGraphicNovel(){
+  var x = document.getElementById("alterGraphicNovelSect");
+  if (x.style.display === "inline-block") {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("alterComicIssueSect");
+  if (x.style.display === "none") {
+    x.style.display = "inline-block";
+  }
+}
+function hideDeleteGraphicNovel(){
+  var x = document.getElementById("deleteGraphicNovelSect");
+  if (x.style.display === "inline-block") {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("deleteComicIssueSect");
+  if (x.style.display === "none") {
+    x.style.display = "inline-block";
+  }
+}
+function hideSortGraphicNovel(){
+  var x = document.getElementById("sortGraphicNovelSect");
+  if (x.style.display === "inline-block") {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("sortComicIssueSect");
+  if (x.style.display === "none") {
+    x.style.display = "inline-block";
+  }
+}
+function hideHideGraphicNovel(){
+  var x = document.getElementById("hideGraphicNovelSect");
+  if (x.style.display === "inline-block") {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("hideComicIssueSect");
+  if (x.style.display === "none") {
+    x.style.display = "inline-block";
+  }
+}
+//HIDE COMIC SERIES
+function showAlterGraphicNovel(){
+  var x = document.getElementById("alterComicIssueSect");
+  if (x.style.display === "inline-block") {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("alterGraphicNovelSect");
+  if (x.style.display === "none") {
+    x.style.display = "inline-block";
+  }
+}
+function showDeleteGraphicNovel(){
+  var x = document.getElementById("deleteComicIssueSect");
+  if (x.style.display === "inline-block") {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("deleteGraphicNovelSect");
+  if (x.style.display === "none") {
+    x.style.display = "inline-block";
+  }
+}
+function showSortGraphicNovel(){
+  var x = document.getElementById("sortComicIssueSect");
+  if (x.style.display === "inline-block") {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("sortGraphicNovelSect");
+  if (x.style.display === "none") {
+    x.style.display = "inline-block";
+  }
+}
+function showHideGraphicNovel(){
+  var x = document.getElementById("hideComicIssueSect");
+  if (x.style.display === "inline-block") {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("hideGraphicNovelSect");
+  if (x.style.display === "none") {
+    x.style.display = "inline-block";
+  }
+}
+
+
 //CLOSE WINDOWS
 function closeWindow(){
   var x = document.getElementById("manage-databases-pop-up-box");

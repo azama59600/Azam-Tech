@@ -41,7 +41,7 @@
             <h6 class="last-updated text-margin font-abel sub-heading">LAST UPDATED: <span style="font-weight: bold;">01_JAN_2019</span></h6>
             <h6 class="entry-count text-margin font-abel sub-heading">ENTRY COUNT: <span style="font-weight: bold;">23</span></h6>
             <!--Buttons-->
-            <button id="addGraphicButton" class="font-abel add-command-button command-database-button primary-background-color" onclick="openAddWindow()">ADD</button>
+            <button id="addGraphicButton" class="font-abel add-command-button command-database-button primary-background-color" onclick="openAddWindow();showAddGraphicNovel();">ADD</button>
             <button id="alterGraphicButton" class="font-abel command-database-button secondary-background-color" onclick="openAlterWindow();showAlterGraphicNovel();">ALTER</button>
             <button id="deleteGraphicButton" class="font-abel command-database-button tertiary-background-color" onclick="openDeleteWindow();showDeleteGraphicNovel();">DELETE</button>
             <button id="sortGraphicButton" class="font-abel command-database-button quaternary-background-color" onclick="openSortWindow();showSortGraphicNovel();">SORT</button>
@@ -53,7 +53,7 @@
             <h6 class="last-updated text-margin font-abel sub-heading">LAST UPDATED: <span style="font-weight: bold;">26_MAR_2019</span></h6>
             <h6 class="entry-count text-margin font-abel sub-heading">ENTRY COUNT: <span style="font-weight: bold;">42</span></h6>
             <!--Buttons-->
-            <button class="font-abel add-command-button command-database-button primary-background-color" onclick="openAddWindow()">ADD</button>
+            <button class="font-abel add-command-button command-database-button primary-background-color" onclick="openAddWindow();hideAddGraphicNovel();">ADD</button>
             <button class="font-abel command-database-button secondary-background-color" onclick="openAlterWindow();hideAlterGraphicNovel()">ALTER</button>
             <button class="font-abel command-database-button tertiary-background-color" onclick="openDeleteWindow();hideDeleteGraphicNovel()">DELETE</button>
             <button class="font-abel command-database-button quaternary-background-color" onclick="openSortWindow();hideSortGraphicNovel()">SORT</button>
@@ -67,8 +67,10 @@
             <div class="w3-row database-frame">
               <h6 class="create-database-title font-abel sub-heading"><span style="color: white;">01. CREATE NEW DATABASES</span></h6>
               <h6 class="enter-database-name font-abel sub-heading">ENTER NAME FOR DATABASES</h6>
-              <input class="input-name-text font-abel w3-input w3-border" type="text">
-              <button class="font-abel database-button">CREATE DATABASES<i id="manage-box-arrow"></i></button>
+              <form action="php/create_database.php" method="post">
+                <input name="create_db_name" class="input-name-text font-abel w3-input w3-border" type="text">
+                <button class="font-abel database-button">CREATE DATABASES<i id="manage-box-arrow"></i></button>  
+              </form>
             </div>
             <div class="w3-row database-frame">
               <h6 class="delete-database-title font-abel sub-heading"><span style="color: white;">02. DELETE DATABASES</span></h6>
@@ -95,23 +97,23 @@
               </select>
             </div>
             <!--01. GRAPHIC NOVEL-->
-            <div class="w3-row database-frame">
+            <div id="addGraphicNovelSect" class="w3-row database-frame" style="display: inline-block;">
               <h6 class="create-database-title font-abel sub-heading"><span style="color: white;">01. GRAPHIC NOVEL</span></h6>
               <div class="w3-row">
                 <!--ID-->
                 <h6 class="enter-database-name font-abel sub-heading">ID</h6>
-                <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3em;">
+                <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3.2em;">
               </div>
               <div class="w3-row">
                 <div class="w3-col" style="width:15%">
                   <!--YEAR-->
                   <h6 class="enter-database-name font-abel sub-heading">YEAR</h6>
-                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3.1em;">
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3.2em;">
                 </div>
                 <div class="w3-col" style="width:41%">
                   <!--BRAND-->
                   <h6 class="enter-database-name font-abel sub-heading">BRAND</h6>
-                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:9em;">
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:9.35em;">
                 </div>
                 <div class="w3-col" style="width:44%">
                   <!--CONTINUITY-->
@@ -123,7 +125,7 @@
                 <div class="w3-col" style="width:76.15%">
                   <!--SERIES NAME-->
                   <h6 class="enter-database-name font-abel sub-heading">SERIES NAME</h6>
-                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:17.08em;">
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:17.71em;">
                 </div>
                 <div class="w3-col" style="width:20%">
                   <!--ONGOING-->
@@ -139,42 +141,121 @@
                 <div class="w3-col" style="width:33%">
                   <!--TOTAL VOL NO.-->
                   <h6 class="enter-database-name font-abel sub-heading">TOTAL VOL NO.</h6>
-                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:7.2em;">
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3.2em;">
                 </div>
+
                 <div class="w3-col" style="width:31%">
-                  <!--VOL FIRST ISSUE-->
-                  <h6 class="enter-database-name font-abel sub-heading">FIRST ISSUE</h6>
-                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:6.75em;">
-                </div>
-                <div class="w3-col" style="width:25%">
-                  <!--VOL LAST ISSUE-->
-                  <h6 class="enter-database-name font-abel sub-heading">LAST ISSUE</h6>
-                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:5.8em;">
+                  <!--UP-TO-DATE-->
+                  <h6 class="enter-database-name font-abel sub-heading">UP-TO-DATE</h6>
+                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 6em; font-size: 0.8em; border: 0.1em solid white;                  ">
+                    <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
+                    <option class="dropdown-options tertiary-background-color" value="1">YES</option>
+                    <option class="dropdown-options quaternary-background-color" value="2">NO</option>
+                  </select>    
                 </div>
               </div>
               <div class="w3-row">
-                <div class="w3-col" style="width:41%">
+                <div class="w3-col" style="width:40%">
                   <!--CURRENT VOL NO.-->
                   <h6 class="enter-database-name font-abel sub-heading">CURRENT VOL NO.</h6>
-                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:9.05em;">
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3.2em;">
                 </div>
-                <div class="w3-col" style="width:56%">
+                <div class="w3-col" style="width:33%">
                   <!--VOL NO. RELEASE DATE-->
                   <h6 class="enter-database-name font-abel sub-heading">RELEASE DATE</h6>
                   <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:7.5em;">
                 </div>
               </div>
               <div class="w3-row">
-                <!--UP-TO-DATE-->
-                <h6 class="enter-database-name font-abel sub-heading">UP-TO-DATE</h6>
-                <select class="w3-select font-abel dropdown-databases" name="option" style="width: 6em; font-size: 0.8em; border: 0.1em solid white;                  ">
-                  <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
-                  <option class="dropdown-options tertiary-background-color" value="1">YES</option>
-                  <option class="dropdown-options quaternary-background-color" value="2">NO</option>
-                </select>    
+                <div class="w3-col" style="width:29%">
+                  <!--VOL FIRST ISSUE-->
+                  <h6 class="enter-database-name font-abel sub-heading">FIRST ISSUE</h6>
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3.2em;">
+                </div>
+                <div class="w3-col" style="width:25%">
+                  <!--VOL LAST ISSUE-->
+                  <h6 class="enter-database-name font-abel sub-heading">LAST ISSUE</h6>
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3.2em;">
+                </div>
               </div>
+
               <button class="font-abel database-button">ADD GRAPHIC NOVEL SERIES<i id="manage-box-arrow"></i></button>
             </div>
+            <!--02. COMIC ISSUES-->
+            <div id="addComicIssueSect" class="w3-row database-frame" style="display: inline-block;">
+              <h6 class="create-database-title font-abel sub-heading"><span style="color: white;">02. COMIC ISSUES</span></h6>
+              <div class="w3-row">
+                <!--ID-->
+                <h6 class="enter-database-name font-abel sub-heading">ID</h6>
+                <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3.2em;">
+              </div>
+              <div class="w3-row">
+                <div class="w3-col" style="width:15%">
+                  <!--YEAR-->
+                  <h6 class="enter-database-name font-abel sub-heading">YEAR</h6>
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3.2em;">
+                </div>
+                <div class="w3-col" style="width:41%">
+                  <!--BRAND-->
+                  <h6 class="enter-database-name font-abel sub-heading">BRAND</h6>
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:9.35em;">
+                </div>
+                <div class="w3-col" style="width:44%">
+                  <!--CONTINUITY-->
+                  <h6 class="enter-database-name font-abel sub-heading">CONTINUITY</h6>
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:9em;">
+                </div>
+              </div>
+              <div class="w3-row">
+                <div class="w3-col" style="width:76.15%">
+                  <!--SERIES NAME-->
+                  <h6 class="enter-database-name font-abel sub-heading">SERIES NAME</h6>
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:17.71em;">
+                </div>
+                <div class="w3-col" style="width:20%">
+                  <!--ONGOING-->
+                  <h6 class="enter-database-name font-abel sub-heading">ONGOING</h6>
+                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 4.38em; font-size: 0.8em; border: 0.1em solid white;                  ">
+                    <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
+                    <option class="dropdown-options tertiary-background-color" value="1">YES</option>
+                    <option class="dropdown-options quaternary-background-color" value="2">NO</option>
+                  </select>    
+                </div>
+              </div>
+              <div class="w3-row">
+                <div class="w3-col" style="width:37%">
+                  <!--TOTAL ISSUE NO.-->
+                  <h6 class="enter-database-name font-abel sub-heading">TOTAL ISSUE NO.</h6>
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3.2em;">
+                </div>
+
+                <div class="w3-col" style="width:31%">
+                  <!--UP-TO-DATE-->
+                  <h6 class="enter-database-name font-abel sub-heading">UP-TO-DATE</h6>
+                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 6em; font-size: 0.8em; border: 0.1em solid white;                  ">
+                    <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
+                    <option class="dropdown-options tertiary-background-color" value="1">YES</option>
+                    <option class="dropdown-options quaternary-background-color" value="2">NO</option>
+                  </select>    
+                </div>
+              </div>
+              <div class="w3-row">
+                <div class="w3-col" style="width:44%">
+                  <!--CURRENT ISSUE NO.-->
+                  <h6 class="enter-database-name font-abel sub-heading">CURRENT ISSUE NO.</h6>
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3.2em;">
+                </div>
+                <div class="w3-col" style="width:33%">
+                  <!--ISSUE NO. RELEASE DATE-->
+                  <h6 class="enter-database-name font-abel sub-heading">RELEASE DATE</h6>
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:7.5em;">
+                </div>
+              </div>
+
+              
+              <button class="font-abel database-button">ADD COMIC ISSUE SERIES<i id="manage-box-arrow"></i></button>
+            </div>
+
           </div>
 
           <!--[WINDOW] ALTER ENTRY-->
@@ -198,10 +279,10 @@
                 <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3em;">
               </div>
               <div class="w3-row">
-                <div class="w3-col" style="width:36%">
+                <div class="w3-col" style="width:35%">
                   <!--COLUMN-->
                   <h6 class="enter-database-name font-abel sub-heading">COLUMN</h6>
-                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 8em; font-size: 0.8em; border: 0.1em solid white;                  ">
+                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 7.8em; font-size: 0.8em; border: 0.1em solid white;                  ">
                     <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
                     <option class="dropdown-options tertiary-background-color" value="1">YES</option>
                     <option class="dropdown-options quaternary-background-color" value="2">NO</option>
@@ -210,7 +291,7 @@
                 <div class="w3-col" style="width:64%">
                   <!--NEW VALUE-->
                   <h6 class="enter-database-name font-abel sub-heading">NEW VALUE</h6>
-                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:13.6em;">
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:14.25em;">
                 </div>
               </div>
             <button class="font-abel database-button">ALTER GRAPHIC NOVEL SERIES<i id="manage-box-arrow"></i></button>
@@ -224,10 +305,10 @@
                 <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:3em;">
               </div>
               <div class="w3-row">
-                <div class="w3-col" style="width:36%">
+                <div class="w3-col" style="width:35%">
                   <!--COLUMN-->
                   <h6 class="enter-database-name font-abel sub-heading">COLUMN</h6>
-                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 8em; font-size: 0.8em; border: 0.1em solid white;                  ">
+                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 7.8em; font-size: 0.8em; border: 0.1em solid white;                  ">
                     <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
                     <option class="dropdown-options tertiary-background-color" value="1">YES</option>
                     <option class="dropdown-options quaternary-background-color" value="2">NO</option>
@@ -236,7 +317,7 @@
                 <div class="w3-col" style="width:64%">
                   <!--NEW VALUE-->
                   <h6 class="enter-database-name font-abel sub-heading">NEW VALUE</h6>
-                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:13.6em;">
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:14.25em;">
                 </div>
               </div>
               <button class="font-abel database-button">ALTER COMIC ISSUE SERIES<i id="manage-box-arrow"></i></button>
@@ -296,7 +377,7 @@
                 <div class="w3-col" style="width:60%">
                   <!--COLUMN-->
                   <h6 class="enter-database-name font-abel sub-heading">COLUMN</h6>
-                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 13.5em; font-size: 0.8em; border: 0.1em solid white;                  ">
+                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 13.8em; font-size: 0.8em; border: 0.1em solid white;                  ">
                     <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
                     <option class="dropdown-options tertiary-background-color" value="1">YES</option>
                     <option class="dropdown-options quaternary-background-color" value="2">NO</option>
@@ -305,7 +386,7 @@
                 <div class="w3-col" style="width:30%">
                   <!--VALUE-->
                   <h6 class="enter-database-name font-abel sub-heading">ORDER BY</h6>
-                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 8em; font-size: 0.8em; border: 0.1em solid white;                  ">
+                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 8.35em; font-size: 0.8em; border: 0.1em solid white;                  ">
                     <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
                     <option class="dropdown-options tertiary-background-color" value="1">ASC</option>
                     <option class="dropdown-options quaternary-background-color" value="2">DESC</option>
@@ -322,7 +403,7 @@
                 <div class="w3-col" style="width:60%">
                   <!--COLUMN-->
                   <h6 class="enter-database-name font-abel sub-heading">COLUMN</h6>
-                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 13.5em; font-size: 0.8em; border: 0.1em solid white;                  ">
+                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 13.8em; font-size: 0.8em; border: 0.1em solid white;                  ">
                     <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
                     <option class="dropdown-options tertiary-background-color" value="1">YES</option>
                     <option class="dropdown-options quaternary-background-color" value="2">NO</option>
@@ -331,7 +412,7 @@
                 <div class="w3-col" style="width:30%">
                   <!--VALUE-->
                   <h6 class="enter-database-name font-abel sub-heading">ORDER BY</h6>
-                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 8em; font-size: 0.8em; border: 0.1em solid white;                  ">
+                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 8.35em; font-size: 0.8em; border: 0.1em solid white;                  ">
                     <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
                     <option class="dropdown-options tertiary-background-color" value="1">ASC</option>
                     <option class="dropdown-options quaternary-background-color" value="2">DESC</option>
@@ -360,19 +441,19 @@
             <div id="hideGraphicNovelSect" class="w3-row database-frame" style="display: inline-block;">
               <h6 class="create-database-title font-abel sub-heading"><span style="color: white;">01. GRAPHIC NOVEL</span></h6>
               <div class="w3-row">
-                <div class="w3-col" style="width:36%">
+                <div class="w3-col" style="width:37.2%">
                   <!--COLUMN-->
                   <h6 class="enter-database-name font-abel sub-heading">COLUMN</h6>
-                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 8em; font-size: 0.8em; border: 0.1em solid white;                  ">
+                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 8.4em; font-size: 0.8em; border: 0.1em solid white;                  ">
                     <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
                     <option class="dropdown-options tertiary-background-color" value="1">YES</option>
                     <option class="dropdown-options quaternary-background-color" value="2">NO</option>
                   </select>    
                 </div>
-                <div class="w3-col" style="width:64%">
+                <div class="w3-col" style="width:62.8%">
                   <!--VALUE-->
                   <h6 class="enter-database-name font-abel sub-heading">VALUE</h6>
-                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:13.6em;">
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:13.8em;">
                 </div>
               </div>
               <button class="font-abel database-button">HIDE GRAPHIC NOVEL SERIES<i id="manage-box-arrow"></i></button>
@@ -381,19 +462,19 @@
             <div id="hideComicIssueSect" class="w3-row database-frame" style="display: inline-block;">
               <h6 class="create-database-title font-abel sub-heading"><span style="color: white;">02. COMIC ISSUES</span></h6>
               <div class="w3-row">
-                <div class="w3-col" style="width:36%">
+                <div class="w3-col" style="width:37.2%">
                   <!--COLUMN-->
                   <h6 class="enter-database-name font-abel sub-heading">COLUMN</h6>
-                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 8em; font-size: 0.8em; border: 0.1em solid white;                  ">
+                  <select class="w3-select font-abel dropdown-databases" name="option" style="width: 8.4em; font-size: 0.8em; border: 0.1em solid white;                  ">
                     <option class="dropdown-options secondary-background-color" value="" disabled selected></option>
                     <option class="dropdown-options tertiary-background-color" value="1">YES</option>
                     <option class="dropdown-options quaternary-background-color" value="2">NO</option>
                   </select>    
                 </div>
-                <div class="w3-col" style="width:64%">
+                <div class="w3-col" style="width:62.8%">
                   <!--VALUE-->
                   <h6 class="enter-database-name font-abel sub-heading">VALUE</h6>
-                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:13.6em;">
+                  <input class="input-name-text font-abel w3-input w3-border" type="text" style="width:13.8em;">
                 </div>
               </div>
               <button class="font-abel database-button">HIDE COMIC ISSUE SERIES<i id="manage-box-arrow"></i></button>

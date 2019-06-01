@@ -281,7 +281,6 @@ html {
     border: 0.05em solid white;
     background-color: black;
     z-index: 1001;
-    width: 20em;
     /*center*/
     text-align: center;
     position: absolute;
@@ -291,12 +290,10 @@ html {
     height: 30em;
     box-shadow: 0em 0em 1.3em #888888;
 }
-
 #alter-entry-pop-up-box{
     border: 0.05em solid white;
     background-color: black;
     z-index: 1001;
-    width: 20em;
     /*center*/
     text-align: center;
     position: absolute;
@@ -320,6 +317,7 @@ html {
     height: 13.5em;
     box-shadow: 0em 0em 1.3em #888888;
 }
+
 #sort-entry-pop-up-box{
     border: 0.05em solid white;
     background-color: black;
@@ -347,6 +345,37 @@ html {
     width: 20em;
     height: 13.5em;
     box-shadow: 0em 0em 1.3em #888888;
+}
+/*WIDTH*/
+#addGraphicNovelSect{
+    width:19em;
+}
+#addComicIssueSect{
+    width:19em;
+}
+#alterGraphicNovelSect{
+    width:19em;
+}
+#alterComicIssueSect{
+    width:19em;
+}
+#deleteGraphicNovelSect{
+    width:19em;
+}
+#deleteComicIssueSect{
+    width:19em;
+}
+#sortGraphicNovelSect{
+    width:19em;
+}
+#sortComicIssueSect{
+    width:19em;
+}
+#hideGraphicNovelSect{
+    width:19em;
+}
+#hideComicIssueSect{
+    width:19em;
 }
 
 /*COLUMN 4 - MEDIA*/

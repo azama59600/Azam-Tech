@@ -37,6 +37,17 @@ function openHideWindow(){
 }
 
 //HIDE GRAPHIC NOVELS
+function hideAddGraphicNovel(){
+  var x = document.getElementById("addGraphicNovelSect");
+  if (x.style.display === "inline-block") {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("addComicIssueSect");
+  if (x.style.display === "none") {
+    x.style.display = "inline-block";
+  }
+  document.getElementById("add-entry-pop-up-box").style.height = "26.6em";
+}
 function hideAlterGraphicNovel(){
   var x = document.getElementById("alterGraphicNovelSect");
   if (x.style.display === "inline-block") {
@@ -78,6 +89,17 @@ function hideHideGraphicNovel(){
   }
 }
 //HIDE COMIC SERIES
+function showAddGraphicNovel(){
+  var x = document.getElementById("addComicIssueSect");
+  if (x.style.display === "inline-block") {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("addGraphicNovelSect");
+  if (x.style.display === "none") {
+    x.style.display = "inline-block";
+  }
+  document.getElementById("add-entry-pop-up-box").style.height = "30em";
+}
 function showAlterGraphicNovel(){
   var x = document.getElementById("alterComicIssueSect");
   if (x.style.display === "inline-block") {

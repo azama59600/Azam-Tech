@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Assistant|News+Cycle&display=swap" rel="stylesheet">
+
+    <style>
+        .errorMessage{
+            font-family: 'Abel', sans-serif;
+            color: white;
+        }
+    </style>
+
 <?php
 $database_name = $_POST["create_db_name"];
 // Create Connection
@@ -8,17 +25,20 @@ if (!$conn){
 }
 
 //Create Database
-$sql = "CREATE DATABASE IF NOT EXISTS $database_name";
+$sql = "CREATE DATABASE $database_name";
 if (mysqli_query($conn, $sql)) {
     echo "Database created successfully";
     createGraphicTable($database_name);
 } else {
-    echo "Error creating database: " . mysqli_error($conn);
+    echo "?> 
+
+
+
+<p class=".errorMessage">Error creating database: </p>
+
+<?php" . mysqli_error($conn);
 }
 mysqli_close($conn);
-
-
-
 
 
 function createGraphicTable($database_name){
@@ -47,3 +67,6 @@ function createGraphicTable($database_name){
 }
 
 ?>
+
+
+</html>

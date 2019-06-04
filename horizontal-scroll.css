@@ -83,6 +83,7 @@ html {
     color: white;
 }
 
+
 /*COLUMN TITLES*/
 #column1-title{
     text-align: left;
@@ -405,6 +406,23 @@ html {
     margin-left: 0.5em;
 }
 
+/*Item Columns*/
+.main-col{
+    margin: 0.5em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    width: auto;
+    height: auto;
+    color: white;
+}
+.thumbnail-carousel{
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 80em;
+}
+.thumbnail-vid-img{
+    height: 20em;
+}
 
 /*VIDEO PROPERTIES*/
 .youtubeVideo{

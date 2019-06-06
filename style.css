@@ -12,8 +12,86 @@
     font-size: 1em;
 }
 
-.comic-tracker-main-section{
-    border: 0.3em solid rgb(95, 95, 95);
+.comic-tracker-bg{
+    background: url(img/comic_tracker/batman_bg.png) no-repeat right bottom fixed; 
+    -webkit-background-size: 32.5em 44.2em;
+    -moz-background-size: 32.5em 44.2em;
+    -o-background-size: 32.5em 44.2em;
+    background-size: 32.5em 44.2em;
+}
+/**COMIC TRACKER START SECTION**/
+#comic-tracker-start-section{
+    border: 0.05em solid rgb(95, 95, 95);
+    background-color: white;
+    width: 35em;
+    text-align: center;
+    margin: 0;
+    position: absolute;  
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#start-tracker-button{
+    width: 25em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin-bottom: 1em;
+}
+
+/**COMIC TRACKER VIEW TABLE SECTION**/
+#comic-tracker-view-section{
+    border: 0.05em solid rgb(95, 95, 95);
+    background-color: white;
+    min-height: 45em;
+    width: 58.91em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+}
+#load-database{
+    margin:0;
+    font-size: 1em;
+}
+.dropdown-options{
+    font-size: 1em;
+}
+#create-new-database-button{
+    margin: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top : 0.5em;
+    margin-bottom: 1em;
+}
+/**COMIC TRACKER ALTER TABLE SECTION**/
+#comic-tracker-alter-section{
+    border: 0.05em solid rgb(95, 95, 95);
+    background-color: white;
+    min-height: 45em;
+    width: 25em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+}
+.tab-button{
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 1em;
+    display:inline-block;
+}
+/**COMIC TRACKER MANAGE DB SECTION**/
+#comic-tracker-manage-section{
+    border: 0.05em solid rgb(95, 95, 95);
+    background-color: white;
+    min-height: 45em;
+    width: 25em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
 }
 
 .font-abel{

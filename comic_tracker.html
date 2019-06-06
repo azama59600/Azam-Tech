@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>COMIC TRACKER | AZAM INDUSTRIES</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="framework/w3.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+
+    <!--Navbar-->
+    <div class="w3-display-container w3-bar w3-black upper-bar">
+      <div class="w3-display-middle">
+          <a class="w3-bar-item nav-title font-abel">AZAM INDUSTRIES</a>
+      </div>
+    </div>
+    <!--Navbar-->
+    <div class="w3-display-container w3-bar w3-black lower-bar">
+      <div class="w3-display-middle">
+        <a class="w3-bar-item nav-subtitle font-abel">BLOG</a>
+        <a class="w3-bar-item nav-subtitle font-abel">ABOUT US</a>
+        <a class="w3-bar-item nav-subtitle font-abel">COMIC TRACKER</a>
+        <a class="w3-bar-item nav-subtitle font-abel">OTHER PROJECTS</a>
+        <a class="w3-bar-item nav-subtitle font-abel">CONTACT US</a>
+      </div>
+    </div>
+  </head>
+
+  <body class="comic-tracker-bg">
+    <!--COMIC TRACKING START SECTION-->
+    <div id="comic-tracker-start-section" class="w3-container">
+      <h1 id="comic-tracker-title" class="font-abel">COMIC TRACKER</h1>
+      <button id="start-tracker-button" class="w3-button w3-black font-abel" onclick="showApplication()">START</button>
+    </div>
+
+    <!--COMIC TRACKING APPLICATOn-->
+    <div id="comic-tracking-application" style="display: none;">
+      <div class="w3-container w3-col" id="comic-tracker-view-section" >
+        <h3 class="font-abel">VIEW TABLES</h3>
+  
+        <!--Load Database dropdown menu-->
+        <select id="load-database" class="w3-select font-abel dropdown-databases" name="option">
+          <option class="dropdown-options" value="" disabled selected>LOAD DATABASE</option>
+          <option class="dropdown-options" value="1" >MARVEL</option>
+          <option class="dropdown-options" value="2">DC</option>
+          <option class="dropdown-options" value="3">IMAGE</option>
+        </select>
+        <button id="create-new-database-button" class="w3-button w3-black font-abel" onclick="showManageDatabases()">MANAGE DATABASES</button>
+
+      </div>
+  
+      <div class="w3-container w3-col" id="comic-tracker-alter-section">
+        <h3 class="font-abel">ALTER TABLES</h3>
+        <div class="w3-row">
+          <button class="w3-button w3-black font-abel tab-button">ADD</button>
+          <button class="w3-button w3-black font-abel tab-button">ALTER</button>
+          <button class="w3-button w3-black font-abel tab-button">DELETE</button>
+        </div>
+      </div>
+
+      <div class="w3-container w3-col" id="comic-tracker-manage-section" style="display: none">
+        <h3 class="font-abel">MANAGE DATABASES</h3>
+        <div class="w3-row">
+          <button class="w3-button w3-black font-abel tab-button">CREATE</button>
+          <button class="w3-button w3-black font-abel tab-button">DELETE</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>

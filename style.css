@@ -47,6 +47,9 @@
 .nav-subtitle{
     font-size: 1em;
 }
+.nav-link{
+    text-decoration: none;
+}
 
 .comic-tracker-bg{
     background: url(img/comic_tracker/batman_bg.png) no-repeat right bottom fixed; 

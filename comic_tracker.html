@@ -17,17 +17,17 @@
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 
     <!--Navbar-->
-    <div class="w3-display-container w3-bar w3-black upper-bar">
+    <div id="upper-bar" class="w3-display-container w3-bar w3-black">
       <div class="w3-display-middle">
           <a class="w3-bar-item nav-title font-abel">AZAM INDUSTRIES</a>
       </div>
     </div>
     <!--Navbar-->
-    <div class="w3-display-container w3-bar w3-black lower-bar">
+    <div id="lower-bar" class="w3-display-container w3-bar w3-black">
       <div class="w3-display-middle">
         <a class="w3-bar-item nav-subtitle font-abel">BLOG</a>
         <a class="w3-bar-item nav-subtitle font-abel">ABOUT US</a>
-        <a class="w3-bar-item nav-subtitle font-abel">COMIC TRACKER</a>
+        <a href="comic_tracker.html" class="w3-bar-item w3-button nav-subtitle font-abel">COMIC TRACKER</a>
         <a class="w3-bar-item nav-subtitle font-abel">OTHER PROJECTS</a>
         <a class="w3-bar-item nav-subtitle font-abel">CONTACT US</a>
       </div>
@@ -53,31 +53,252 @@
           <option class="dropdown-options" value="2">DC</option>
           <option class="dropdown-options" value="3">IMAGE</option>
         </select>
-        <button id="create-new-database-button" class="w3-button w3-black font-abel" onclick="showManageDatabases()">MANAGE DATABASES</button>
-
+        <button id="manage-databases-button" class="w3-button w3-black font-abel" onclick="showManageDatabases()">MANAGE DATABASES</button>
+        <button id="alter-tables-button" class="w3-button w3-black font-abel" onclick="showAlterTables()">ALTER TABLES</button>
+        <button id="view-options-button" class="w3-button w3-black font-abel" onclick="showViewOptionsSection()">VIEW OPTIONS</button>
       </div>
   
+      <!--ALTER TABLES SECTION-->
       <div class="w3-container w3-col" id="comic-tracker-alter-section">
         <h3 class="font-abel">ALTER TABLES</h3>
         <div class="w3-row">
-          <button class="w3-button w3-black font-abel tab-button">ADD</button>
-          <button class="w3-button w3-black font-abel tab-button">ALTER</button>
-          <button class="w3-button w3-black font-abel tab-button">DELETE</button>
+          <button class="w3-button w3-black font-abel tab-button" onclick="showAddSection()">ADD</button>
+          <button class="w3-button w3-black font-abel tab-button" onclick="showAlterSection()">ALTER</button>
+          <button class="w3-button w3-black font-abel tab-button" onclick="showDeleteSection()">DELETE</button>
         </div>
+
+        <!--ADD: Load table dropdown menu-->
+        <select id="load-add-table" class="w3-select font-abel dropdown-table" name="option" style="display: none">
+          <option class="dropdown-options" value="0" disabled selected>LOAD TABLE</option>
+          <option class="dropdown-options" value="1" >GRAPHIC NOVELS</option>
+          <option class="dropdown-options" value="2">COMIC ISSUES</option>
+        </select>
+        <!--ALTER: Load table dropdown menu-->
+        <select id="load-alter-table" class="w3-select font-abel dropdown-table" name="option" style="display: none">
+          <option class="dropdown-options" value="0" disabled selected>LOAD TABLE</option>
+          <option class="dropdown-options" value="1" >GRAPHIC NOVELS</option>
+          <option class="dropdown-options" value="2">COMIC ISSUES</option>
+        </select>
+        <!--DELETE: Load table dropdown menu-->
+        <select id="load-delete-table" class="w3-select font-abel dropdown-table" name="option" style="display: none">
+          <option class="dropdown-options" value="0" disabled selected>LOAD TABLE</option>
+          <option class="dropdown-options" value="1" >GRAPHIC NOVELS</option>
+          <option class="dropdown-options" value="2">COMIC ISSUES</option>
+        </select>
+
+        <div id="add-graphic-novel" class="w3-container main-alter-table-section" style="display: none">
+          <p class="font-abel">ADD GRAPHIC NOVEL</p>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">ID</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">YEAR</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">BRAND</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:9.5em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">CONTINUITY</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:7em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">SERIES NAME</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:9.5em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">ONGOING</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">TOTAL VOL NO.</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">CURRENT VOL NO.</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">VOL NO. RELEASE DATE</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:5.2em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">VOL. FIRST ISSUE</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">VOL. LAST ISSUE</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">UP-TO-DATE</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <button class="w3-button font-abel side-panel-button" onclick="">ADD GRAPHIC NOVEL</button>
+        </div>
+        <div id="alter-graphic-novel" class="w3-container main-alter-table-section" style="display: none">
+          <p class="font-abel">ALTER GRAPHIC NOVEL</p>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">ID</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">COLUMN</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:10em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">NEW VALUE</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:10em;">
+          </div>
+          <button class="w3-button font-abel side-panel-button" onclick="">ALTER GRAPHIC NOVEL</button>
+        </div>
+        <div id="delete-graphic-novel" class="w3-container main-alter-table-section" style="display: none">
+          <p class="font-abel">DELETE GRAPHIC NOVEL</p>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">ID</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <button class="w3-button font-abel side-panel-button" onclick="">DELETE GRAPHIC NOVEL</button>
+        </div>
+
+        <div id="add-comic-issue" class="w3-container main-alter-table-section" style="display: none">
+          <p class="font-abel">ADD COMIC ISSUE</p>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">ID</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">YEAR</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">BRAND</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:9.5em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">CONTINUITY</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:7em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">SERIES NAME</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:9.5em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">ONGOING</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">TOTAL ISSUE NO.</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">CURRENT ISSUE NO.</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">ISSUE NO. RELEASE DATE</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:5.2em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">UP-TO-DATE</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <button class="w3-button font-abel side-panel-button" onclick="">ADD COMIC ISSUE</button>
+        </div>
+        <div id="alter-comic-issue" class="w3-container main-alter-table-section" style="display: none">
+          <p class="font-abel">ALTER COMIC ISSUE</p>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">ID</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">COLUMN</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:10em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">NEW VALUE</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:10em;">
+          </div>
+          <button class="w3-button font-abel side-panel-button" onclick="">ALTER COMIC ISSUE</button>
+        </div>
+        <div id="delete-comic-issue" class="w3-container main-alter-table-section" style="display: none">
+          <p class="font-abel">DELETE COMIC ISSUE</p>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">ID</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <button class="w3-button font-abel side-panel-button" onclick="">DELETE COMIC ISSUE</button>
+        </div>
+
       </div>
 
+      <!--MANAGE DATABASES SECTION-->
       <div class="w3-container w3-col" id="comic-tracker-manage-section" style="display: none">
         <h3 class="font-abel">MANAGE DATABASES</h3>
         <div class="w3-row">
-          <button class="w3-button w3-black font-abel tab-button">CREATE</button>
-          <button class="w3-button w3-black font-abel tab-button">DELETE</button>
+          <button class="w3-button w3-black font-abel tab-button" onclick="showCreateDbSection()">CREATE</button>
+          <button class="w3-button w3-black font-abel tab-button" onclick="showDeleteDbSection()">DELETE</button>
+        </div>
+
+        <div id="create-new-database" class="w3-container main-manage-database-section" style="display: none">
+          <p class="font-abel">CREATE NEW DATABASE</p>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">NAME</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:10em;">
+          </div>
+          <button class="w3-button font-abel side-panel-button" onclick="">CREATE DATABASE</button>
+        </div>
+
+        <div id="delete-database" class="w3-container main-manage-database-section" style="display: none">
+          <p class="font-abel">DELETE DATABASE</p>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">NAME</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:10em;">
+          </div>
+          <button class="w3-button font-abel side-panel-button" onclick="">DELETE DATABASE</button>
+        </div>
+      </div>
+
+      <!--VIEW OPTIONS SECTION-->
+      <div class="w3-container w3-col" id="comic-tracker-view-options-section" style="display: none">
+        <h3 class="font-abel">VIEW OPTIONS</h3>
+        <div class="w3-row">
+          <button class="w3-button w3-black font-abel tab-button" onclick="showSortEntries()">SORT ENTRIES</button>
+          <button class="w3-button w3-black font-abel tab-button" onclick="showHideEntries()">HIDE ENTRIES</button>
+        </div>
+
+        <div id="sort-entries-container" class="w3-container main-view-options-section" style="display: none">
+          <p class="font-abel">SORT ENTRIES</p>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">COLUMN</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:10em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">ORDER</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:2.3em;">
+          </div>
+          <button class="w3-button font-abel side-panel-button" onclick="">SORT ENTRIES</button>
+        </div>
+
+        <div id="hide-entries-container" class="w3-container main-view-options-section" style="display: none">
+          <p class="font-abel">HIDE ENTRIES</p>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">COLUMN</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:10em;">
+          </div>
+          <div class="w3-row side-panel-row">
+            <p class="font-abel side-panel-text">VALUE</p>
+            <input class="w3-input font-abel side-panel-input" type="text" style="width:10em;">
+          </div>
+          <button class="w3-button font-abel side-panel-button" onclick="">HIDE ENTRIES</button>
         </div>
       </div>
 
     </div>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>

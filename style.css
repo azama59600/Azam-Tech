@@ -33,6 +33,22 @@
     color:white;
 }
 
+#welcome-row{
+    background: url(img/index/iron-man-2-starting-computer.jpg) no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 46.5em;
+}
+
+#welcome-message-container{
+    position: absolute;  
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgb(95, 95, 95, 0.5);
+}
 
 #upper-bar{
     height:2.2em;

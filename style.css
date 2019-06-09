@@ -3,7 +3,7 @@
 }
 body, html {height: 100%}
 #nav-bar{
-    height:2.2em;
+    height:100%;
 }
 .nav-title{
     font-size: 2em;
@@ -40,6 +40,13 @@ body, html {height: 100%}
     background-size: cover;
     background-color: rgb(26, 50, 88);
     min-height: 25%;
+}
+
+.blogPageHeaderBgImg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(26, 50, 88);
+    min-height: 90%;
 }
 
 .comic-tracker-bg{

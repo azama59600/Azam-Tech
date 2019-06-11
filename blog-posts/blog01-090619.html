@@ -42,24 +42,37 @@
     <div class="w3-container w3-center w3-padding-32" style="padding-top: 0;">
       <div class="w3-content" style="text-align:left;max-width:50em;padding-bottom: 2%;">
         <p class="font-abel" style="font-size:1.5em;">Encryption is the process of encoding data in way where only authorised users can view. Decryption is the process of making encoded data readable again.</p>
-        <p class="font-abel" style="font-size:1.5em;">In Batman Vs Superman, Batman gains encrypted data from Luthors private server. In order to view this data he has to run a decryption program.</p>
-        <p class="font-abel" style="font-size:1.5em;">We will be creating an encryption application with the same look and feel to the .</p>
+        <p class="font-abel" style="font-size:1.5em;">In Batman Vs Superman, Batman steals encrypted data from Luthor's private server. In order to view this data he has to run a decryption program. We will be creating an application with the same look and feel as the one in BvS. This application will have the ability to encrypt and decrypt files.</p>
 
-        <p class="font-abel" style="font-size:1.5em;">Due to the the application being a FUI (Fake User Interface), there is a lot of unnecessary information. Therefore, we need to use abstraction to remove the features that are not needed for our encryption program.</p>
-        <p class="font-abel" style="font-size:1.5em;">We will start with the first stage where Batman inserted the drive into the computer to which a CONNECTED message was displayed. </p>
+        <p class="font-abel" style="font-size:1.5em;">FUIs (Fake User Interfaces), including this one, are only designed to look good. This means that the layout or text styling are usually not very user-friendly. For example, in this FUI the text is in an incredibly small font for which to read you have to move closer. We can resolve this issue by removing the unneccesary information from the screen and using a larger font size.</p>
+        <p class="font-abel" style="font-size:1.5em;">We should start by analysing the UI in the different stages of the decryption scene. The first stage is where Batman inserted the drive into the computer to which a CONNECTED message was displayed.</p>
         <figure class="w3-content">
           <img src="../img\blog-posts\blog01-090619\BvS_decrypting-01.jpg" style="width:100%">
-          <figcaption class="font-abel">WARNER BROS's BATMAN VS SUPERMAN</figcaption>
+          <figcaption class="font-abel">FIRST STAGE ONCE DEVICE IS CONNECTED | WARNER BROS's BATMAN VS SUPERMAN</figcaption>
         </figure>
-        <p class="font-abel" style="font-size:1.5em;">The middle container contains a drive letter and what appears to be its status. The drive letter is most likely referring to the drive containing the stolen encrypted data. There appears to be a command line interface (CLI) beneath it. A CLI is a text-based UI used to interact with the OS and applications. Typed into the CLI, there is writing that seems to say <i>crypyt</i> following an unreadable word and a filepath. The rest of the information surrounding the middle container is illegible.</p>
+        <p class="font-abel" style="font-size:1.5em;">The middle container contains a drive letter and what appears to be its status. The drive letter is highly likely referring to the drive containing the stolen encrypted data. There appears to be a command line interface (CLI) beneath it. A CLI is a text-based UI used to interact with the OS and applications. Typed into the CLI, there is writing that seems to say <i>crypyt</i> following an unreadable word and a filepath. The <i>crypt</i> most likely refers to a command-line encryption utility that is used to decrypt the files. The rest of the information surrounding the middle container is illegible.</p>
         <figure class="w3-content">
-          <img src="../img\blog-posts\blog01-090619\BvS_decrypting-02.png" style="width:100%">
-          <figcaption class="font-abel">WARNER BROS's BATMAN VS SUPERMAN</figcaption>
+          <img src="../img\blog-posts\blog01-090619\BvS_decrypting-02.jpg" style="width:100%">
+          <figcaption class="font-abel">INITIATING DECRYPTION | WARNER BROS's BATMAN VS SUPERMAN</figcaption>
         </figure>
-        <p class="font-abel" style="font-size:1.5em;">The second stage is the decryption stage. This stage allows us to see the right-hand pane. On the right-hand pane, there is a list of SkyServers that Batman could interact with. SkyServer provides astronomers and scientific institutions with SDSS who have made detailed 3-D maps of the Universe. Since this isn't related to encryting/decrypting data we can ignore it. </p>
+        <p class="font-abel" style="font-size:1.5em;">In the second stage the user is told that its INITIATING DECRYPTION.</p>
+        <figure class="w3-content">
+          <img src="../img\blog-posts\blog01-090619\BvS_decrypting-03.png" style="width:100%">
+          <figcaption class="font-abel">DECRYPTION  [1%] | WARNER BROS's BATMAN VS SUPERMAN</figcaption>
+        </figure>
+        <p class="font-abel" style="font-size:1.5em;">The third stage is the decryption stage. This stage allows us to see the right-hand pane. On the right-hand pane, there is a list of SkyServers that Batman could interact with. SkyServer provides astronomers and scientific institutions with SDSS's research. They have made detailed 3-D maps of the Universe. Since this isn't related to encryting/decrypting data we can ignore it. </p>
         <p class="font-abel" style="font-size:1.5em;">The middle container contains information on the decryption status, a drive letter and a file path. <i>/dev</i> is the location of device files in a Linux Filesystem Hierarchy. With this information the file path <i>/dev/LEECH_01</i> may refer to the data copied from Luthor's server.</p>      
-        <p class="font-abel" style="font-size:1.5em;">Although there is not much information to work on, we can replace the information surrounding the middle block with our own features.</p>      
-
+        <figure class="w3-content">
+          <img src="../img\blog-posts\blog01-090619\BvS_decrypting-04.jpg" style="width:100%">
+          <figcaption class="font-abel">DECRYPTION  [2%] | WARNER BROS's BATMAN VS SUPERMAN</figcaption>
+        </figure>
+        <p class="font-abel" style="font-size:1.5em;">As decryption progresses, the percent number increments and the red progress bar expands.</p>
+        <figure class="w3-content">
+          <img src="../img\blog-posts\blog01-090619\BvS_decrypting-05.jpg" style="width:100%">
+          <figcaption class="font-abel">DECRYPTION  COMPLETE | WARNER BROS's BATMAN VS SUPERMAN</figcaption>
+        </figure>
+        <p class="font-abel" style="font-size:1.5em;">The fourth and final stage is when the decompression is complete. Once decryption is complete the middle container expands to the left and right-hand side.</p>      
+        <p class="font-abel" style="font-size:1.5em;">Based on this breakdown we will write a specification on what the project should have. We then need to draw a map of the different screens and their layout.</p>      
       </div>
     </div>
 

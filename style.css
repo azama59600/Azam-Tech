@@ -25,7 +25,7 @@ body, html {height: 100%}
     margin-left: 1em;
 }
 .welcome-text-style{
-    background-color: rgba(37, 89, 172, 0.904);
+    background-color: rgba(121, 0, 0, 0.863);
 }
 
 .computerBgImg {
@@ -38,14 +38,14 @@ body, html {height: 100%}
 .blogHeaderBgImg {
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgb(26, 50, 88);
+    background-color: rgb(121, 0, 0);
     min-height: 25%;
 }
 
 .blogPageHeaderBgImg {
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgb(26, 50, 88);
+    background-color: rgb(121, 0, 0);
     min-height: 90%;
 }
 
